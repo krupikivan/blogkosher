@@ -7,6 +7,19 @@
 # Add Style
 - yarn add bootstrap@4.5 jquery popper.js
 
+- For Javascript into config/webpack/environment.js 
+
+        const webpack = require("webpack")
+        environment.plugins.append("Provide", new webpack.ProvidePlugin({
+        $: 'jquery',
+        jQuery: 'jquery',
+        Popper: ['popper.js', 'default']
+        }))
+- For CSS into app/assets/stylesheets/application.css
+        *= require bootstrap
+
+
+
 # Rails command line
 
 - rails s             ---> Start puma server
