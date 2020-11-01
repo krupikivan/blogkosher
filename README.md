@@ -1,10 +1,12 @@
-# README
+# Commands
 
-# Start
+# Rails
+
+## Start
 - rails new appName
 - rails generate controller pages
 
-# Add Style
+## Add Style
 - yarn add bootstrap@4.5 jquery popper.js
 
 - For Javascript into config/webpack/environment.js 
@@ -19,8 +21,7 @@
         *= require bootstrap
 
 
-
-# Rails command line
+## Rails command line
 
 - rails s             ---> Start puma server
 
@@ -30,13 +31,15 @@
 
 - rails console   ---> Open debug console
 
-# Creating Articles
+## Creating Articles
 - Migration file (db): rails generate migration create_articles
 - Run migration file (if has changes):  rails db:migrate
 - Undo last migration: rails db:rollback
 - Create new migration every time has changes
 
-# Production Deploy -> HEROKU
+# HEROKU
+
+## Production Deploy
 - heroku create
 
 - add gem 'pg' to production group and sqlite to development and test group
@@ -49,12 +52,12 @@
 
 - git push heroku master
 
-# To run migrations at heroku, you can use the following command:
+## To run migrations at heroku, you can use the following command:
 
 - heroku run rails db:migrate
 - heroku open
 
-# Heroku Command
+## Heroku Command
 
 - Create app: heroku create
 
