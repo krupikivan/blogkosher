@@ -1,4 +1,7 @@
 class User < ApplicationRecord
+    # Self is referencing each object of the user class 
+    before_save { self.email = email.downcase }
+    
     validates :username, presence: true, 
                 uniqueness: { case_sensitive: false }, 
                 length: { minimum: 3, maximum: 25 }
@@ -11,4 +14,6 @@ class User < ApplicationRecord
                 format: { with: VALID_EMAIL_REGEX }
     # User has many articles
     has_many :articles
+
+    has_secure_password
 end

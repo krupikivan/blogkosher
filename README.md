@@ -31,7 +31,7 @@
 
 - rails console   ---> Open debug console
 
-## Creating Articles
+## Creating new migration
 - Migration file (db): rails generate migration create_articles
 - Run migration file (if has changes):  rails db:migrate
 - Undo last migration: rails db:rollback
